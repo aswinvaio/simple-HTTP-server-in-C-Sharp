@@ -1,0 +1,28 @@
+C:\SVN\MyServer\MyServer\bin\Debug\MyServer.exe.config
+C:\SVN\MyServer\MyServer\bin\Debug\MyServer.exe
+C:\SVN\MyServer\MyServer\bin\Debug\MyServer.pdb
+C:\SVN\MyServer\MyServer\obj\Debug\MyServer.csprojResolveAssemblyReference.cache
+C:\SVN\MyServer\MyServer\obj\Debug\MyServer.exe
+C:\SVN\MyServer\MyServer\obj\Debug\MyServer.pdb
+C:\SVN\MyServer\MyServer\bin\Debug\hi.html
+C:\SVN\MyServer\MyServer\bin\Debug\hello.html
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\MyServer.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\obj\Debug\MyServer.exe
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\obj\Debug\MyServer.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\hi.html
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\hello.html
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\MyServer.exe
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\MyServer.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\obj\Debug\MyServer.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\page1.htm
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\Error.html
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\RequestProcessor.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\RequestProcessor.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\Server.config
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\ExtensionHandler.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\ExtensionHandler.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\hi.ftml
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\hello.ftml
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\student.csv
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\CsvjsonHandler.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\CsvjsonHandler.pdb

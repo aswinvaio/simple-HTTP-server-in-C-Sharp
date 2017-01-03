@@ -1,0 +1,5 @@
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\ExtensionHandler\obj\Debug\ExtensionHandler.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\ExtensionHandler\bin\Debug\ExtensionHandler.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\ExtensionHandler\bin\Debug\ExtensionHandler.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\ExtensionHandler\obj\Debug\ExtensionHandler.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\ExtensionHandler\obj\Debug\ExtensionHandler.pdb

@@ -1,0 +1,7 @@
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\RequestProcessor\bin\Debug\RequestProcessor.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\RequestProcessor\bin\Debug\RequestProcessor.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\RequestProcessor\obj\Debug\RequestProcessor.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\RequestProcessor\obj\Debug\RequestProcessor.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\RequestProcessor\obj\Debug\RequestProcessor.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\RequestProcessor\bin\Debug\ExtensionHandler.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\RequestProcessor\bin\Debug\ExtensionHandler.pdb

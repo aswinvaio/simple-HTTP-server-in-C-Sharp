@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Second Page</title>
+</head>
+<body style="background-color:<%=txtColor%>">
+    <h1 style="color: #808080">Second Page</h1>
+    <h3>Name : <%=txtName%> </h3>
+    <h3>Number : <%=txtNumber%> </h3>
+    <br />
+    <img src="images.jpeg" />
+</body>
+</html>
