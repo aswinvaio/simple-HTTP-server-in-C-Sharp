@@ -24,22 +24,25 @@ namespace RequestProcessor
             {
                 //debug
                 Console.WriteLine("pathToCsvFile: {0}", pathToFile);
+                if (context.Request.Headers["If-Modified-Since"] != null && !checkIfModified(pathToFile, Convert.ToDateTime(context.Request.Headers["If-Modified-Since"])))
+                {
+                    context.Response.StatusCode = (int)HttpStatusCode.NotModified;
+                }
+                else
+                {
+                    TextReader tr = new StreamReader(pathToFile);
+                    string csvContent = tr.ReadToEnd();  //getting the page's content
+                    tr.Close();
+                    // replace windows style \r\n line ending with single \n
+                    Helper.FieldReplacer(ref csvContent, @"\r\n", "\n");
+                    // now remove trailing newline added by csv editor
+                    Helper.FieldReplacer(ref csvContent, @"\n\z", "");
+                    Bitmap image = ConvertCsvToImage(csvContent);
+                    context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(pathToFile).ToString("r"));
 
-                //using (Stream input = new FileStream(pathToFile, FileMode.Open, FileAccess.Read, FileShare.Read))
-                //{
-                TextReader tr = new StreamReader(pathToFile);
-                string csvContent = tr.ReadToEnd();  //getting the page's content
-                tr.Close();
-                // replace windows style \r\n line ending with single \n
-                Helper.FieldReplacer(ref csvContent, @"\r\n", "\n");
-                // now remove trailing newline added by csv editor
-                Helper.FieldReplacer(ref csvContent, @"\n\z", "");
-                Bitmap image = ConvertCsvToImage(csvContent);
-
-                image.Save(st, System.Drawing.Imaging.ImageFormat.Jpeg);
-                context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(pathToFile).ToString("r"));
-                context.Response.StatusCode = (int)HttpStatusCode.OK;
-                //}
+                    image.Save(st, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    context.Response.StatusCode = (int)HttpStatusCode.OK;
+                }
             }
             catch (Exception e)
             {
@@ -75,5 +78,12 @@ namespace RequestProcessor
 
             return image;
         }
+        private bool checkIfModified(String fileName, DateTime since)
+        {
+            FileInfo info = new FileInfo(fileName);
+            DateTime lastmodified = info.LastWriteTime;
+            return lastmodified > since;
+        }
+
     }
 }

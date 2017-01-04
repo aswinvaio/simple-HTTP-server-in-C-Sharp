@@ -20,7 +20,7 @@ namespace RequestProcessor
         public void ProcessRequest(HttpListenerContext context)
         {
             
-            string htmlContent;
+            string htmlContent = "";
             string pathToFile = Directory.GetCurrentDirectory() + context.Request.Url.LocalPath;
 
             //replace extension with .csv
@@ -29,12 +29,19 @@ namespace RequestProcessor
             {
                 //debug
                 Console.WriteLine("pathToCsvFile: {0}", pathToFile);
-                TextReader tr = new StreamReader(pathToFile);
-                string csvContent = tr.ReadToEnd();  //getting the page's content
+                if (context.Request.Headers["If-Modified-Since"] != null && !checkIfModified(pathToFile, Convert.ToDateTime(context.Request.Headers["If-Modified-Since"])))
+                {
+                    context.Response.StatusCode = (int)HttpStatusCode.NotModified;
+                }
+                else
+                {
+                    TextReader tr = new StreamReader(pathToFile);
+                    string csvContent = tr.ReadToEnd();  //getting the page's content
 
-                //context.Response.ContentType = Helper.MimeTypes["html"];
-                htmlContent = convertCsvToHtml(csvContent);
-                context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(pathToFile).ToString("r"));
+                    //context.Response.ContentType = Helper.MimeTypes["html"];
+                    htmlContent = convertCsvToHtml(csvContent);
+                    context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(pathToFile).ToString("r"));
+                }
 
             }
             catch (FileNotFoundException)
@@ -80,6 +87,12 @@ namespace RequestProcessor
             Helper.FieldReplacer(ref csvContent, @"&", "&amp");
             Helper.FieldReplacer(ref csvContent, @"\<", "&lt");
             Helper.FieldReplacer(ref csvContent, @"\>", "&gt");
+        }
+        private bool checkIfModified(String fileName, DateTime since)
+        {
+            FileInfo info = new FileInfo(fileName);
+            DateTime lastmodified = info.LastWriteTime;
+            return lastmodified > since;
         }
 
     }

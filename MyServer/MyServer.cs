@@ -47,14 +47,23 @@ namespace MyServer
             Console.WriteLine(context.Request.HttpMethod + " " + filename);
             string mime;
 
+
             if (mimeTypeMappings.TryGetValue(_extention, out mime))
             {
                 if (File.Exists(filename))
                 {
                     try
                     {
-                        contextWrite(context, filename, mime);
-                        context.Response.StatusCode = (int)HttpStatusCode.OK;
+                        if (context.Request.Headers["If-Modified-Since"] != null && !checkIfModified(filename, Convert.ToDateTime(context.Request.Headers["If-Modified-Since"])))
+                        {
+                            context.Response.StatusCode = (int)HttpStatusCode.NotModified;
+                        }
+                        else
+                        {
+                            contextWrite(context, filename, mime);
+                            context.Response.StatusCode = (int)HttpStatusCode.OK;
+                        }
+
                     }
                     catch (Exception ex)
                     {
@@ -96,9 +105,16 @@ namespace MyServer
                     {
                         try
                         {
-                            mime = "application/octet-stream";
-                            contextWrite(context, filename, mime);
-                            context.Response.StatusCode = (int)HttpStatusCode.OK;
+                            if (context.Request.Headers["If-Modified-Since"] != null && !checkIfModified(filename, Convert.ToDateTime(context.Request.Headers["If-Modified-Since"])))
+                            {
+                                context.Response.StatusCode = (int)HttpStatusCode.NotModified;
+                            }
+                            else
+                            {
+                                mime = "application/octet-stream";
+                                contextWrite(context, filename, mime);
+                                context.Response.StatusCode = (int)HttpStatusCode.OK;
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -113,6 +129,13 @@ namespace MyServer
             }
             context.Response.OutputStream.Flush();
             context.Response.OutputStream.Close();
+        }
+
+        private bool checkIfModified(String fileName, DateTime since)
+        {
+            FileInfo info = new FileInfo(fileName);
+            DateTime lastmodified = info.LastWriteTime;
+            return lastmodified>since;
         }
 
         private void contextWrite(HttpListenerContext context, string filename, string mime)

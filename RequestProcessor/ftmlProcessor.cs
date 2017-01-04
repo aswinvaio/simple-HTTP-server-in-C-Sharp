@@ -47,10 +47,18 @@ namespace RequestProcessor
             {
                 try
                 {
-                    Stream input = new FileStream(filename, FileMode.Open);
-                    context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(filename).ToString("r"));
-                    byte[] buff = replaceDelims(input, _REQUEST);
-                    context.Response.OutputStream.Write(buff, 0, buff.Length);
+                    if (context.Request.Headers["If-Modified-Since"] != null && !checkIfModified(filename, Convert.ToDateTime(context.Request.Headers["If-Modified-Since"])))
+                    {
+                        context.Response.StatusCode = (int)HttpStatusCode.NotModified;
+                    }
+                    else
+                    {
+                        Stream input = new FileStream(filename, FileMode.Open);
+                        context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(filename).ToString("r"));
+                        byte[] buff = replaceDelims(input, _REQUEST);
+                        context.Response.OutputStream.Write(buff, 0, buff.Length);
+                        context.Response.StatusCode = (int)HttpStatusCode.OK;
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -111,5 +119,13 @@ namespace RequestProcessor
             }
             return nameval;
         }
+
+        private bool checkIfModified(String fileName, DateTime since)
+        {
+            FileInfo info = new FileInfo(fileName);
+            DateTime lastmodified = info.LastWriteTime;
+            return lastmodified > since;
+        }
+
     }
 }
