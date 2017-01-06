@@ -54,7 +54,7 @@ namespace RequestProcessor
                     else
                     {
                         Stream input = new FileStream(filename, FileMode.Open);
-                        context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(filename).ToString("r"));
+                        context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(filename).ToUniversalTime().ToString("r"));
                         byte[] buff = replaceDelims(input, _REQUEST);
                         context.Response.OutputStream.Write(buff, 0, buff.Length);
                         context.Response.StatusCode = (int)HttpStatusCode.OK;
@@ -123,7 +123,9 @@ namespace RequestProcessor
         private bool checkIfModified(String fileName, DateTime since)
         {
             FileInfo info = new FileInfo(fileName);
-            DateTime lastmodified = info.LastWriteTime;
+            DateTime dt = info.LastWriteTime;
+            DateTime lastmodified = new DateTime(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, 0);
+            int rv = DateTime.Compare(lastmodified, since);
             return lastmodified > since;
         }
 

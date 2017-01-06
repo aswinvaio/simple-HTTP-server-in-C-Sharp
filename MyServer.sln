@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionHandler", "Extensi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvjsonHandler", "..\..\..\..\Desktop\CsvjsonHandler\CsvjsonHandler.csproj", "{69D36023-62E3-4542-BAFB-30F3278CCA8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XhtmlFields", "XhtmlFields\XhtmlFields.csproj", "{DD97C1A7-1332-4F71-8E77-84D4FC55271D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XhtmlHandler", "XhtmlHandler\XhtmlHandler.csproj", "{97E7E9BD-50C0-49FD-8B25-AF4B39A4BC3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,14 @@ Global
 		{69D36023-62E3-4542-BAFB-30F3278CCA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69D36023-62E3-4542-BAFB-30F3278CCA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69D36023-62E3-4542-BAFB-30F3278CCA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD97C1A7-1332-4F71-8E77-84D4FC55271D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD97C1A7-1332-4F71-8E77-84D4FC55271D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD97C1A7-1332-4F71-8E77-84D4FC55271D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD97C1A7-1332-4F71-8E77-84D4FC55271D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97E7E9BD-50C0-49FD-8B25-AF4B39A4BC3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E7E9BD-50C0-49FD-8B25-AF4B39A4BC3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E7E9BD-50C0-49FD-8B25-AF4B39A4BC3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E7E9BD-50C0-49FD-8B25-AF4B39A4BC3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

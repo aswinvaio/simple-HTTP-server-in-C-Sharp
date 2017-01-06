@@ -38,7 +38,7 @@ namespace RequestProcessor
                     // now remove trailing newline added by csv editor
                     Helper.FieldReplacer(ref csvContent, @"\n\z", "");
                     Bitmap image = ConvertCsvToImage(csvContent);
-                    context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(pathToFile).ToString("r"));
+                    context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(pathToFile).ToUniversalTime().ToString("r"));
 
                     image.Save(st, System.Drawing.Imaging.ImageFormat.Jpeg);
                     context.Response.StatusCode = (int)HttpStatusCode.OK;
@@ -81,7 +81,9 @@ namespace RequestProcessor
         private bool checkIfModified(String fileName, DateTime since)
         {
             FileInfo info = new FileInfo(fileName);
-            DateTime lastmodified = info.LastWriteTime;
+            DateTime dt = info.LastWriteTime;
+            DateTime lastmodified = new DateTime(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, 0);
+            int rv = DateTime.Compare(lastmodified, since);
             return lastmodified > since;
         }
 

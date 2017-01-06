@@ -134,14 +134,15 @@ namespace MyServer
         private bool checkIfModified(String fileName, DateTime since)
         {
             FileInfo info = new FileInfo(fileName);
-            DateTime lastmodified = info.LastWriteTime;
-            return lastmodified>since;
+            DateTime dt = info.LastWriteTime;
+            DateTime lastmodified = new DateTime(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, 0);
+            return lastmodified > since;
         }
 
         private void contextWrite(HttpListenerContext context, string filename, string mime)
         {
             Stream output = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read);
-            context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(filename).ToString("r"));
+            context.Response.AddHeader("Last-Modified", File.GetLastWriteTime(filename).ToUniversalTime().ToString("r"));
             context.Response.AddHeader("Date", DateTime.Now.ToString("r"));
             context.Response.ContentType = mime;
             context.Response.ContentLength64 = output.Length;
@@ -161,7 +162,6 @@ namespace MyServer
                 Console.WriteLine("- - Server started");
                 while (true)
                 {
-
                     HttpListenerContext context = this.httpListener.GetContext();
                     Console.Write("- - - - New request : ");
                     Thread t = new Thread(() => processRequest(context));

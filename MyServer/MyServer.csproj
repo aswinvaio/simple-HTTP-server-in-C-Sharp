@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="form.xhtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="hello.ftml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -62,9 +65,11 @@
     <None Include="student.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="XhtmlSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="hi.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -97,7 +102,16 @@
       <Project>{836489fa-faa7-4955-826b-75e329291a71}</Project>
       <Name>RequestProcessor</Name>
     </ProjectReference>
+    <ProjectReference Include="..\XhtmlFields\XhtmlFields.csproj">
+      <Project>{dd97c1a7-1332-4f71-8e77-84d4fc55271d}</Project>
+      <Name>XhtmlFields</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XhtmlHandler\XhtmlHandler.csproj">
+      <Project>{97e7e9bd-50c0-49fd-8b25-af4b39a4bc3b}</Project>
+      <Name>XhtmlHandler</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

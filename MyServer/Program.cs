@@ -23,7 +23,9 @@ namespace MyServer
         {
             Myserver ser = new Myserver("127.0.0.1", "1700", "");
             ser.Start();
-            Console.ReadKey();
+
+
+            //Console.ReadKey();
         }
     }
 

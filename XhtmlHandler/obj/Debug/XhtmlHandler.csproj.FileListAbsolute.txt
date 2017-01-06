@@ -1,0 +1,24 @@
+C:\Users\Anju\Documents\Visual Studio 2012\Projects\Ajay\Webserver\XhtmlHandler\obj\Debug\XhtmlHandler.csprojResolveAssemblyReference.cache
+C:\Users\Anju\Documents\Visual Studio 2012\Projects\Ajay\Webserver\XhtmlHandler\bin\Debug\XhtmlHandler.dll
+C:\Users\Anju\Documents\Visual Studio 2012\Projects\Ajay\Webserver\XhtmlHandler\bin\Debug\XhtmlHandler.pdb
+C:\Users\Anju\Documents\Visual Studio 2012\Projects\Ajay\Webserver\XhtmlHandler\bin\Debug\IExtensionHandler.dll
+C:\Users\Anju\Documents\Visual Studio 2012\Projects\Ajay\Webserver\XhtmlHandler\bin\Debug\IExtensionHandler.pdb
+C:\Users\Anju\Documents\Visual Studio 2012\Projects\Ajay\Webserver\XhtmlHandler\obj\Debug\XhtmlHandler.dll
+C:\Users\Anju\Documents\Visual Studio 2012\Projects\Ajay\Webserver\XhtmlHandler\obj\Debug\XhtmlHandler.pdb
+C:\Users\Administrator\Desktop\XhtmlHandler\obj\Debug\XhtmlHandler.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\XhtmlHandler\obj\Debug\XhtmlHandler.dll
+C:\Users\Administrator\Desktop\XhtmlHandler\obj\Debug\XhtmlHandler.pdb
+C:\Users\Administrator\Desktop\XhtmlHandler\bin\Debug\XhtmlHandler.dll
+C:\Users\Administrator\Desktop\XhtmlHandler\bin\Debug\XhtmlHandler.pdb
+C:\Users\Administrator\Desktop\XhtmlHandler\bin\Debug\ExtensionHandler.dll
+C:\Users\Administrator\Desktop\XhtmlHandler\bin\Debug\ExtensionHandler.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\bin\Debug\XhtmlHandler.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\bin\Debug\XhtmlHandler.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\bin\Debug\ExtensionHandler.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\bin\Debug\ExtensionHandler.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\obj\Debug\XhtmlHandler.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\obj\Debug\XhtmlHandler.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\obj\Debug\XhtmlHandler.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\obj\Debug\XhtmlHandler.g.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\obj\Debug\XhtmlHandler.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\obj\Debug\XhtmlHandler.Schema.resources
