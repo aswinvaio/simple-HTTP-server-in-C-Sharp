@@ -1,20 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <page class="XhtmlFields.XhtmlFields, XhtmlFields"> 
-<head>
-	<title>nothing can stop me I'm all the way up</title>
-	<meta name="description" content="nothing can stop me I'm all the way up$"/>
-</head>
-<body bgcolor="$$$Var3$$$"><k/>
-<h1> $$$Var1$$$ Rules!! </h1>
-<form method="POST">
-	Tell me who rules the world: 
-	<input type="text" name="Var1" />
-		<input type="text" name="Var3" />
-        <x item="TextBox" id="txtBox1"/>
-        <x item="TextBox" id="txtBox1"/>
-		<input type="submit"/>
-		<br/>
-		<p> www </p>
-</form>
-</body>
+	<head>
+		<title>nothing can stop me I'm all the way up</title>
+		<meta name="description" content="nothing can stop me I'm all the way up$"/>
+	</head>
+	<body bgcolor="$$$Var3$$$">
+		<form method="POST" action="" id="from1">
+			<h1> User Details </h1>
+			<table>
+				<tr>
+					<td>
+						First Name :
+					</td>
+					<td>
+			 			<input type="text" name="firstName" value="$$$firstName$$$" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Last Name :
+					</td>
+					<td>
+			 			<input type="text" name="lastName" value="$$$lastName$$$"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Age :
+					</td>
+					<td>
+			 			<input type="text" name="age" value="$$$age$$$"/>
+					</td>
+				</tr>
+				<tr>
+					<td>Gender : 
+					</td>
+					<td>
+						<select name="gender"  value="$$$gender$$$">
+  							<option value="male">male</option>
+  							<option value="femlae">female</option>
+						</select>
+					</td>
+				</tr>
+				<tr><td>
+					<input type="submit" value="Save"/>
+				</td></tr>
+			</table>
+			<br/>
+			<p> $$$Error$$$ </p>
+		</form>
+	</body>
 </page>

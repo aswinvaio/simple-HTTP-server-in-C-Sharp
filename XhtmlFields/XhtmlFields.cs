@@ -6,27 +6,11 @@ namespace XhtmlFields
     {
         private string _Var1;
 
-        public string Var1
-        {
-            get { return _Var1; }
-            set { _Var1 = value; }
-        }
-
-        private string _Var2 = "Var2 is empty";
-
-        public string Var2
-        {
-            get { return _Var2; }
-            set { _Var2 = value; }
-        }
-
-        private string _Var3 = "808080";
-
-        public string Var3
-        {
-            get { return _Var3; }
-            set { _Var3 = value; }
-        }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string age { get; set; }
+        public string gender { get; set; }
+        public string Error { get; set; }
 
     }
 }

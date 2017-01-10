@@ -67,6 +67,7 @@
     </None>
     <None Include="XhtmlSchema.xsd">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>

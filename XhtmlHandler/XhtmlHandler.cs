@@ -52,9 +52,9 @@ namespace XhtmlHandler
                 {
                     //Console.WriteLine(fileModifiedAt);
                     // process the xhtml content
-                    
-                    string classname="";
-                    xhtmlContent = buildHtml(pathToFile,out classname);
+
+                    string classname = "";
+                    xhtmlContent = buildHtml(pathToFile, out classname);
                     //XhtmlParser xparser = new XhtmlParser(pathToFile, "GET");
 
                     //htmlContent = xparser.Parse();
@@ -86,6 +86,10 @@ namespace XhtmlHandler
             catch (FileNotFoundException)
             {
                 context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+            }
+            catch (Exception ee)
+            {
+                Console.WriteLine(ee.Message);
             }
             finally
             {

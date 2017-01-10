@@ -33,3 +33,4 @@ C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\b
 C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\XhtmlHandler.pdb
 C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\Xhtml.dll
 C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\Xhtml.pdb
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\MyServer\bin\Debug\XhtmlSchema.xsd
