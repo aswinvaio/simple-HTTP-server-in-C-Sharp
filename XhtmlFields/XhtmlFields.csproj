@@ -42,6 +42,12 @@
     <Compile Include="XhtmlFields.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xhtml\Xhtml.csproj">
+      <Project>{2b9da890-2ca9-4b4b-a044-31c24affbfa6}</Project>
+      <Name>Xhtml</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

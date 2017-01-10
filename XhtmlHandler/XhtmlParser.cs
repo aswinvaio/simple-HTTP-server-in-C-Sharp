@@ -12,19 +12,35 @@ namespace XhtmlHandler
     class XhtmlParser
     {
         XDocument xhtmldoc;
-        public XhtmlParser(String filename)
-        {
-            throw new NotImplementedException();
-        }
-        public XhtmlParser(XDocument doc)
+        string xhtmlContent = "";
+        string htmlContent = "";
+        string method = "";
+        public String AssemblyInfo { get; protected set; }
+
+        public XhtmlParser(String filename, string method) : this(XDocument.Load(filename), method) { }
+        public XhtmlParser(XDocument doc,string method)
         {
             this.xhtmldoc = doc;
-            if (validateXml(doc)) { throw new Exception("failed to parse xhtml file"); }
-            
+            if (!validateXml(doc)) { throw new Exception("failed to parse xhtml file"); }
+            this.AssemblyInfo = xhtmldoc.Element("page").Attribute("class").Value;
+            this.method = method;
         }
 
+        public string Parse()
+        {
+            if (method == "GET") {
+                generateHtmlForGET();
+                return htmlContent;
+            }
+            return null;
+        }
 
-
+        private void generateHtmlForGET()
+        {
+            htmlContent = "";
+            XElement head = xhtmldoc.Element("page");
+            
+        }
 
 
 
@@ -45,5 +61,6 @@ namespace XhtmlHandler
             });
             return !isInValid;
         }
+
     }
 }

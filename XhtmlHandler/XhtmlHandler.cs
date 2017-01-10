@@ -53,8 +53,11 @@ namespace XhtmlHandler
                     //Console.WriteLine(fileModifiedAt);
                     // process the xhtml content
                     
-                    string classname;
+                    string classname="";
                     xhtmlContent = buildHtml(pathToFile,out classname);
+                    //XhtmlParser xparser = new XhtmlParser(pathToFile, "GET");
+
+                    //htmlContent = xparser.Parse();
                     try
                     {
                         XhtmlToHtml xhtmlItem = new XhtmlToHtml(xhtmlContent, classname);

@@ -22,3 +22,5 @@ C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandl
 C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\obj\Debug\XhtmlHandler.g.resources
 C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\obj\Debug\XhtmlHandler.csproj.GenerateResource.Cache
 C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\obj\Debug\XhtmlHandler.Schema.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\bin\Debug\Xhtml.dll
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\MyServer\XhtmlHandler\bin\Debug\Xhtml.pdb

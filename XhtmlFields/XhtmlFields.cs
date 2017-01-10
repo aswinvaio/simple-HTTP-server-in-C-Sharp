@@ -1,6 +1,8 @@
-﻿namespace XhtmlFields
+﻿using Xhtml;
+
+namespace XhtmlFields
 {
-    public class XhtmlFields
+    public class XhtmlFields : XhtmlPage
     {
         private string _Var1;
 
@@ -25,6 +27,6 @@
             get { return _Var3; }
             set { _Var3 = value; }
         }
-        
+
     }
 }
